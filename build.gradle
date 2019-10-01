@@ -1,4 +1,4 @@
-subprojects {
+allprojects {
     buildscript {
         repositories {
             jcenter()
@@ -8,12 +8,11 @@ subprojects {
 
     group = GROUP
     version = VERSION_NAME
-
 }
 
 ext {
     androidPlugin = 'com.android.tools.build:gradle:3.5.0'
-    minSdkVersion = 4
+    minSdkVersion = 14
     compileSdkVersion = 22
     buildToolsVersion = '28.0.3'
 }
