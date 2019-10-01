@@ -1,7 +1,16 @@
 buildscript {
     dependencies {
-        classpath rootProject.ext.androidPlugin
+        classpath 'com.android.tools.build:gradle:3.5.0'
     }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.support:support-v4:28.0.0'
+    }
+
 }
 
 apply plugin: 'com.android.library'
@@ -19,10 +28,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_6
         targetCompatibility JavaVersion.VERSION_1_6
     }
-}
-
-dependencies {
-    compile 'com.android.support:support-v4:22.2.1'
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
